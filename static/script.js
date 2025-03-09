@@ -30,7 +30,7 @@
         }
       }
       async function gemini(message) {
-        return await fetch('http://127.0.0.1:8000/gemini/'+message, {
+        return await fetch('https://determined-layne-highoney-1d5d16ea.koyeb.app/gemini/'+message, {
           method: 'GET',
         }).then(response => response.json()).then(data => {
         console.log(data);
