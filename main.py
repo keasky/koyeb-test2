@@ -3,10 +3,8 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from google import genai
 from fastapi.middleware.cors import CORSMiddleware
-import dotenv 
 import os
 
-dotenv.load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 app = FastAPI()
 app.add_middleware(
